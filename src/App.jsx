@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import FeatureGrid from './components/FeatureGrid';
+import ProductHero from './components/ProductHero';
+import Specs from './components/Specs';
+import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 
 function App() {
@@ -13,8 +14,9 @@ function App() {
       }} />
 
       <Navbar />
-      <Hero />
-      <FeatureGrid />
+      <ProductHero />
+      <Specs />
+      <Gallery />
       <Footer />
     </div>
   );

@@ -1,28 +1,23 @@
-import { useState } from 'react'
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import FeatureGrid from './components/FeatureGrid';
+import Footer from './components/Footer';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
-      </div>
+    <div className="min-h-screen bg-[#0a0a0b] text-white selection:bg-orange-500/30 selection:text-white">
+      {/* Cosmic gradient aura */}
+      <div className="pointer-events-none fixed inset-0 opacity-70" style={{
+        background:
+          'radial-gradient(1000px_500px_at_50%_-10%,rgba(255,115,0,0.08),transparent), radial-gradient(800px_400px_at_20%_20%,rgba(255,140,0,0.06),transparent), radial-gradient(900px_500px_at_80%_10%,rgba(0,115,255,0.05),transparent)'
+      }} />
+
+      <Navbar />
+      <Hero />
+      <FeatureGrid />
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
